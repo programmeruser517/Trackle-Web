@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const generateAIActionButton = document.getElementById("generate-ai-action");
     const AIOutputDiv = document.getElementById("ai-output");
     // PLEASE: dont abuse our key here: we've left it here so you can see how it works, but we will be removing it soon
-    const apiKey = "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";
+    const apiKey = "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";
 
     // restrict site stuff
     const restrictedSitesList = document.getElementById("restricted-sites-list");
