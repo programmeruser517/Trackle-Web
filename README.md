@@ -15,10 +15,10 @@ As the web continues to evolve, websites are becoming increasingly complex and r
 ## Features
 
 - **Permission Monitoring**: Track and manage website permission requests
-- Geolocation access
-- Notification permissions
-- Microphone and camera access
-- And more...
+  - Geolocation access
+  - Notification permissions
+  - Microphone and camera access
+  - And more...
 
 - **Resource Tracking**:
 - Monitor webpage resource consumption
