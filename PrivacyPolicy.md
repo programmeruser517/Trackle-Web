@@ -37,8 +37,8 @@ You have full control over the data collected by Trackle. You can:
 ### 6. Contact Information
 If you have questions or concerns about this Privacy Policy, please contact us at:
 
-**Email**: support@trackle.com  
-**Website**: [Trackle Website](https://trackle.com)
+**Developer Email**: grumble367@gmail.com  
+**Issue Website**: [Trackle Issues](https://github.com/programmeruser517/Trackle-Web/issues)
 
 ### 7. Updates to this Privacy Policy
 We may update this Privacy Policy from time to time. Any changes will be posted in the extension and on our website, with an updated "Effective Date."
