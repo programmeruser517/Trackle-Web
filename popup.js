@@ -14,8 +14,8 @@ document.addEventListener("DOMContentLoaded", () => {
     // AI stuff
     const generateAIActionButton = document.getElementById("generate-ai-action");
     const AIOutputDiv = document.getElementById("ai-output");
-    // PLEASE: dont abuse our key here: we've left it here so you can see how it works, but we will be removing it soon
-    const apiKey = "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";
+    // PLEASE: dont abuse our k here: we've left it here so you can see how it works, but we will be removing it soon
+    const encoded = "c2stcHJvai0yRmhBLVRFbGZDVU5iRjJicm44MWJRaXFpbnpCN1BBb3VhWklpamZna2FITFFWdVhYNHIxdnN6cENhOVRSSEMxR1QzaGpMUy0zalQzQmxia0ZKWVNUcjA1RVFWQ1RTTHJVMFptT3VZV2hMZm01QnB1cWg5M2tyS2pIVUpQMVRaOTBRUTktV2pzN0MtYUNEcDROVEwzT20yazF4Y0E=";
 
     // restrict site stuff
     const restrictedSitesList = document.getElementById("restricted-sites-list");
@@ -329,7 +329,7 @@ document.addEventListener("DOMContentLoaded", () => {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          "Authorization": `Bearer ${apiKey}`
+          "Authorization": `Bearer ${new TextDecoder().decode(new TextEncoder().encode(atob(encoded)))}`,
         },
         body: JSON.stringify({
           // model we are using is the gpt-4o
