@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="app">
+    <header>
+    <img id="logo" src="images/logo-curved.png" alt="Trackle Logo">
+    </header>
+    <div id="welcome">
+        <h2>Welcome to Trackle</h2>
+        <p>Manage <b>your</b> web efficiently.</p>
+    </div>
+    <button id="toggle-extension">Disable</button>
+    <div id="logs">
+      <h2>Resource-Intensive Sites</h2>
+      <ul id="log-list"></ul>
+    </div>
+    <div id="restrict-site">
+      <h2>Restrict Site Resources</h2>
+      <input type="text" id="site-url" placeholder="Enter site URL">
+      <button id="add-site">Add</button>
+      <ul id="restricted-sites-list"></ul>
+    </div>
+    <div id="recommend">
+      <h2>Take Action?</h2>
+      <button id="generate-ai-action">Generate Recommendations</button>
+      <div id="ai-output"></div>
+    </div>
+    <div id="permissions" style="text-align: center;">
+      <h2>Permission Togglers</h2>
+      <button id="toggle-microphone">
+        <img src="images/microphone.png" alt="Microphone">
+      </button>
+      <button id="toggle-camera">
+        <img src="images/camera.png" alt="Camera">
+      </button>
+      <button id="toggle-location">
+        <img src="images/location.png" alt="Location">
+      </button>
+    </div>   
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

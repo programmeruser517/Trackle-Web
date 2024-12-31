@@ -1,0 +1,299 @@
+:root {
+--primary: #3b82f6;
+--primary-dark: #2563eb;
+--accent: #f59e0b;
+--success: #10b981;
+--danger: #ef4444;
+--text: #1f2937;
+--text-light: #6b7280;
+--background: #f3f4f6;
+--card: #ffffff;
+--shadow: 0 1px 3px rgba(0,0,0,0.1);
+--transition: all 0.2s ease;
+  }
+  
+  body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: var(--background);
+  width: 300px;
+  color: var(--text);
+  line-height: 1.5;
+  }
+    
+  #app {
+  padding: 16px;
+  max-width: 100%;
+  box-sizing: border-box;
+  }
+    
+  h1 {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text);
+  margin: 0 0 16px;
+  letter-spacing: -0.02em;
+  }
+    
+button {
+margin: 8px 0;
+padding: 12px 20px;
+border: none;
+background: var(--primary);
+color: white;
+cursor: pointer;
+border-radius: 8px;
+font-weight: 500;
+font-size: 14px;
+transition: var(--transition);
+box-shadow: var(--shadow);
+  }
+    
+  button:hover {
+  background: var(--primary-dark);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(33, 150, 243, 0.3);
+  }
+  
+  button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(33, 150, 243, 0.2);
+  }
+    
+  #logs, #permissions, #recommend, #restrict-site {
+  background: var(--card);
+  border-radius: 12px;
+  padding: 16px;
+  margin: 16px 0;
+  box-shadow: var(--shadow);
+  }
+  
+input {
+display: inline-block;
+width: calc(100% - 70px);
+padding: 8px 12px;
+margin: 8px 8px 8px 0;
+border: 1px solid var(--text-light);
+border-radius: 8px;
+box-sizing: border-box;
+font-size: 14px;
+color: var(--text);
+background: var(--card);
+transition: var(--transition);
+}
+  
+  #logs ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  font-size: 12px;
+  color: var(--text-light);
+  }
+  
+  #logs ul li {
+  padding: 5px 0;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  }
+  
+  #logs ul li:last-child {
+  border-bottom: none;
+}
+
+#restrict-site button {
+padding: 8px 16px;
+margin: 0;
+font-size: 13px;
+vertical-align: middle;
+}
+
+/* List items should be structured as:
+<li>
+    <span class="site-url">https://example.com/very/long/url...</span>
+    <button class="remove-site">Remove</button>
+</li>
+*/
+#restricted-sites-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 8px 0 0;
+  font-size: 12px;
+  color: var(--text-light);
+  width: 100%; /* Full width of the container */
+  max-width: 100%;
+}
+
+#restricted-sites-list li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  max-width: 100%; /* Ensure the list item respects the parent width */
+  overflow: hidden; /* Prevent content from overflowing */
+  box-sizing: border-box;
+}
+
+#restricted-sites-list li span {
+  display: inline-block;
+  flex-grow: 1; /* Span takes available space */
+  white-space: nowrap;
+  overflow: hidden; /* Hide overflow */
+  text-overflow: ellipsis; /* Add ellipsis to truncated text */
+  min-width: 0; /* Required for text truncation in flexbox */
+}
+
+#restricted-sites-list li button {
+  flex-shrink: 0; /* Prevent shrinking */
+  padding: 4px 8px;
+  font-size: 11px;
+  background: var(--danger);
+  color: white;
+  border: none;
+  border-radius: 4px;
+}
+
+#restricted-sites-list li button:hover {
+  background: #d32f2f; /* Slightly darker red for hover */
+}
+
+#restricted-sites-list li:last-child {
+border-bottom: none;
+}
+
+  #ai-output {
+    font-size: 12px;
+    color: var(--text-light);
+  }
+
+  header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+  padding: 16px;
+  background: var(--card);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  }
+  
+    #logo {
+      width: 100%;
+      height: 100%;
+    }
+    
+  #toggle-extension, #generate-ai-action {
+  width: 100%;
+  padding: 12px 20px;
+  background: var(--success);
+  font-weight: 500;
+  text-align: center;
+  border-radius: 8px;
+  margin: 12px 0;
+  }
+  
+  #toggle-extension:hover, #generate-ai-action:hover {
+  background: #10a172;
+  }
+    
+/* Permission buttons red state when toggled off (but still interactive) */
+#toggle-microphone.disabled, 
+#toggle-camera.disabled, 
+#toggle-location.disabled,
+#toggle-extension.disabled {
+background: var(--danger);
+opacity: 0.9;
+cursor: pointer;
+}
+  
+  .toggle-button {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .toggle-button:hover {
+  transform: scale(1.05);
+  }
+  
+  .toggle-button img {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.2s ease;
+  }
+  
+  .toggle-button:active img {
+  transform: scale(0.9);
+  }
+    
+    #welcome {
+        background: var(--card);
+        border-radius: 12px;
+        padding: 24px;
+        margin: 0 0 16px;
+        text-align: center;
+        box-shadow: var(--shadow);
+        transition: var(--transition);
+    }
+    
+    #welcome h2 {
+        color: var(--text);
+        font-size: 18px;
+        margin: 0 0 8px;
+        font-weight: 600;
+    }
+    
+    #welcome p {
+        color: var(--text-light);
+        font-size: 14px;
+        margin: 0;
+        line-height: 1.5;
+    }
+
+    /* Grey disabled state when extension is disabled */
+    body.extension-disabled button:not(#toggle-extension),
+    #app.extension-disabled button:not(#toggle-extension) {
+        background: #d1d5db !important;
+        opacity: 0.7;
+        cursor: not-allowed;
+        transform: none !important;
+        box-shadow: none !important;
+        border: none;
+        color: rgba(0, 0, 0, 0.5) !important;
+        pointer-events: none;
+    }
+
+    body.extension-disabled button:not(#toggle-extension):hover,
+    #app.extension-disabled button:not(#toggle-extension):hover {
+        background: #d1d5db !important;
+        transform: none !important;
+        box-shadow: none !important;
+    }
+
+    body.extension-disabled input,
+    #app.extension-disabled input {
+        opacity: 0.7;
+        cursor: not-allowed;
+        background: #d1d5db !important;
+        border-color: #9ca3af !important;
+        color: rgba(0, 0, 0, 0.5) !important;
+        pointer-events: none;
+    }
+
+    button[disabled],
+    input[disabled] {
+        background: #d1d5db !important;
+        opacity: 0.7;
+        cursor: not-allowed !important;
+        pointer-events: none;
+        color: rgba(0, 0, 0, 0.5) !important;
+    }
+
+
+    * {
+        transition: var(--transition);
+    }
