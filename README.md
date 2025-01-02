@@ -15,7 +15,6 @@ As the web continues to evolve, websites are becoming increasingly complex and r
 ## Features
 
 - **Permission Monitoring**: Track and manage website permission requests
-- **Permission Monitoring**: Track and manage website permission requests
     - Geolocation access
     - Notification permissions
     - Microphone and camera access
@@ -28,6 +27,8 @@ As the web continues to evolve, websites are becoming increasingly complex and r
     - Real-time resource usage statistics
 
 ## Installation
+
+Now available in the [Chrome Web Store](https://chromewebstore.google.com/detail/trackle-web/kbclflkapnlphmmeaaelbngfcdjfomjf) :)
 
 1. Clone this repository or download the ZIP file
 ```bash
@@ -68,6 +69,7 @@ Trackle Web/
 |   └── icon-disabled.png   # Extension icon when disabled
 |   └── ...
 └── README.md          # Project documentation
+└── LICENSE            # CC BY-NC 4.0 License
 ```
 
 ## Contributing
